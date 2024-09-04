@@ -1,4 +1,4 @@
-const quotes = [
+const quoteDB = [
   { quote: "人の夢は!!!終わらねェ!!!!", author: "マーシャル・D・ティーチ" },
   { quote: "海賊王に, おれはなる!!!!", author: "モンキー・D・ルフィ" },
   { quote: "生ぎたいっ!!!!", author: "ニコ・ロビン" },
@@ -26,3 +26,11 @@ const quotes = [
     author: "ボン・クレー",
   },
 ];
+
+const quote = document.querySelector(".quote span:first-child");
+const author = document.querySelector(".quote span:last-child");
+
+const slectedQuote = quoteDB[Math.floor(Math.random() * quoteDB.length)];
+
+quote.innerText = slectedQuote.quote;
+author.innerText = slectedQuote.author;
