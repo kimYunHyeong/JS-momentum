@@ -8,27 +8,32 @@
 }
 
 .weather {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
   position: absolute;
   top: 15px;
   right: 15px;
 }
 
-.hidden {
-  display: none;
-}
-
-.background-img {
-  opacity: 0.4;
-  width: 100vw;
-  height: 100vh;
-  z-index: 0;
+body {
+  background-size: cover;
 }
 
 .clock {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  font-size: 120px;
+  align-items: baseline;
   font-weight: 800;
+}
+
+.clock h2:first-child {
+  font-size: 120px;
+}
+
+.clock h2:last-child {
+  font-size: 60px;
 }
 
 .greeting {
@@ -77,6 +82,30 @@
   border: none;
   border-bottom: 3px solid #00ff80;
   font-size: 20px;
+  transition: all 0.5s ease-in-out;
+}
+
+.login-form input:focus,
+.to-do-form input:focus {
+  outline: none;
+}
+
+.login-form input::placeholder {
+  color: gray;
+  font-size: 32px;
+}
+.login-form input:first-child:focus-within,
+.to-do-form input:first-child:focus-within {
+  transform: scale(1.05);
+}
+.login-form input::placeholder {
+  color: gray;
+  font-size: 32px;
+}
+
+.to-do-form input::placeholder {
+  color: gray;
+  font-size: 25px;
 }
 
 .login-form input:last-child {
@@ -101,6 +130,7 @@
   border: none;
   border-bottom: 3px solid red;
   font-size: 20px;
+  transition: all 0.5s ease-in-out;
 }
 
 .to-do-list {
@@ -128,4 +158,31 @@
 
 .to-do__span {
   font-size: 12px;
+}
+
+.hidden {
+  display: none;
+}
+
+.login-form input:last-child:hover {
+  animation: pressOkBtn 1.6s ease-in-out infinite;
+}
+
+@keyframes pressOkBtn {
+  0% {
+    transform: none;
+  }
+  25% {
+    transform: rotateZ(-45deg);
+  }
+
+  50% {
+    transform: rotateZ(0deg);
+  }
+  75% {
+    transform: rotateZ(45deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
 }
