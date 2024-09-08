@@ -1,3 +1,18 @@
+@import "reset.css";
+
+.defualt-font-style {
+  text-align: center;
+  text-shadow: -1.5px 0px black, 0px 1.5px black, 1.5px 0px black,
+    0px -1.5px black;
+  color: white;
+}
+
+.weather {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
 .hidden {
   display: none;
 }
@@ -10,11 +25,107 @@
 }
 
 .clock {
-  color: black;
-  font-size: 80px;
+  display: flex;
+  justify-content: center;
+  font-size: 120px;
+  font-weight: 800;
+}
+
+.greeting {
+  font-size: 100px;
+  font-weight: 600px;
+}
+
+.main {
+  width: 100%;
+  margin-top: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.quote {
+  position: absolute;
+  bottom: 5px;
+  left: 33%;
+  right: 33%;
+
+  font-size: 20px;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form input:first-child {
+  align-items: center;
+  margin: 20px 0px;
+  width: 350px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  border-bottom: 3px solid #00ff80;
+  font-size: 20px;
+}
+
+.login-form input:last-child {
+  margin-top: 10px;
+  margin-left: 10px;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #00ff80;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 50%;
   text-align: center;
 }
 
-body {
-  background-image: "0.png";
+.to-do-form input {
+  align-items: center;
+  margin: 20px 0px;
+  width: 300px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  border-bottom: 3px solid red;
+  font-size: 20px;
+}
+
+.to-do-list {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.to-do__btn {
+  border: 2px solid black;
+  border-radius: 8px;
+  background-color: yellow;
+  color: rgba(255, 0, 0, 0.5);
+  align-items: center;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 800;
+  margin-right: 5px;
+}
+
+.to-do__li {
+  margin-bottom: 5px;
+}
+
+.to-do__span {
+  font-size: 12px;
 }

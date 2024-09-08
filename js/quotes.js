@@ -33,4 +33,4 @@ const author = document.querySelector(".quote span:last-child");
 const slectedQuote = quoteDB[Math.floor(Math.random() * quoteDB.length)];
 
 quote.innerText = slectedQuote.quote;
-author.innerText = slectedQuote.author;
+author.innerText = `-${slectedQuote.author}-`;

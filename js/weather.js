@@ -7,10 +7,10 @@ function onGeoSuccess(positon) {
   fetch(url).then((response) =>
     response.json().then((data) => {
       const weatherContainer = document.querySelector(
-        "weather span:first-child"
+        ".weather span:first-child"
       );
-      const cityContainer = document.querySelector("weather span:last-child");
-      weatherContainer.innerText = `${data.weather[0].main} / ${data.main.temp}`;
+      const cityContainer = document.querySelector(".weather span:last-child");
+      weatherContainer.innerText = `${data.weather[0].main} / ${data.main.temp}°C`;
       cityContainer.innerText = data.name;
     })
   );
